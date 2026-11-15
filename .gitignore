@@ -1,0 +1,19 @@
+# Encrypted Credentials, Auth Vaults & Session State (NEVER COMMIT)
+workspace/*.dpapi
+workspace/*.vault
+workspace/*.secret
+workspace/.mac-vault.json
+workspace/security.json
+workspace/jarvis-state.json
+.env
+.env.*
+
+# Compiled Windows Binaries (rebuilt automatically via Build-Icon-And-Exes.ps1 / Start-Jarvis.ps1)
+bin/*.exe
+bin/*.pdb
+
+# OS & Editor Junk
+.DS_Store
+Thumbs.db
+*.log
+node_modules/

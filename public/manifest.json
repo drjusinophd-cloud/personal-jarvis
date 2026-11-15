@@ -1,0 +1,19 @@
+{
+  "name": "J.A.R.V.I.S. Personal AI Command Center",
+  "short_name": "J.A.R.V.I.S.",
+  "description": "Voice-Controlled Holographic Personal AI Command Center for iPhone, iPad, Mac & Windows",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#030711",
+  "theme_color": "#030711",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "./jarvis-icon.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

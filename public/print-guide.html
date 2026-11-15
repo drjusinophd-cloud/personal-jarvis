@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>J.A.R.V.I.S. // Printable Executive Setup &amp; Operations Manual</title>
+  <style>
+    :root {
+      --ink: #0f172a;
+      --muted: #475569;
+      --accent: #0284c7;
+      --border: #cbd5e1;
+      --bg-box: #f8fafc;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+      color: var(--ink);
+      background: #e2e8f0;
+      margin: 0;
+      padding: 24px;
+      line-height: 1.5;
+      font-size: 13.5px;
+    }
+    .toolbar {
+      max-width: 860px;
+      margin: 0 auto 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      background: #0f172a;
+      color: #fff;
+      padding: 12px 18px;
+      border-radius: 10px;
+    }
+    .print-btn {
+      background: #0ea5e9;
+      color: #fff;
+      border: none;
+      padding: 9px 18px;
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .back-link { color: #7dd3fc; text-decoration: none; font-size: 13px; }
+    .sheet {
+      max-width: 860px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 36px 44px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+    }
+    header {
+      border-bottom: 3px solid var(--ink);
+      padding-bottom: 14px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    h1 { margin: 0; font-size: 22px; letter-spacing: 0.4px; }
+    .subtitle { color: var(--muted); font-size: 13px; margin-top: 3px; }
+    h2 {
+      font-size: 15.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--accent);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 4px;
+      margin: 22px 0 10px;
+    }
+    h3 { font-size: 13.8px; margin: 12px 0 5px; }
+    p, li { margin: 4px 0; }
+    ol, ul { padding-left: 20px; margin: 6px 0; }
+    code {
+      font-family: Consolas, "SFMono-Regular", Menlo, monospace;
+      background: #f1f5f9;
+      padding: 1px 5px;
+      border-radius: 4px;
+      font-size: 12px;
+      border: 1px solid #e2e8f0;
+    }
+    pre {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 9px 12px;
+      font-size: 11.8px;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-all;
+      margin: 6px 0 10px;
+    }
+    .callout {
+      background: var(--bg-box);
+      border-left: 4px solid var(--accent);
+      padding: 9px 13px;
+      border-radius: 4px;
+      margin: 8px 0;
+      font-size: 12.8px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 8px 0 12px;
+      font-size: 12.5px;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 6px 9px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #f1f5f9; font-weight: 700; }
+    .page-break { page-break-before: always; }
+    @media print {
+      body { background: #fff; padding: 0; font-size: 11.5pt; }
+      .toolbar { display: none !important; }
+      .sheet { box-shadow: none; padding: 0; max-width: 100%; }
+      h2, h3, .callout, table { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <div>
+      <strong>J.A.R.V.I.S. Printable Executive Setup &amp; Reference Guide</strong>
+      <span style="opacity:0.75;margin-left:10px;font-size:12px;">Click Print to print on paper or choose "Save as PDF"</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:14px;">
+      <a class="back-link" href="/">&larr; Back to JARVIS HUD</a>
+      <button class="print-btn" onclick="window.print()">🖨 Print / Save as PDF</button>
+    </div>
+  </div>
+
+  <div class="sheet">
+    <header>
+      <div>
+        <h1>J.A.R.V.I.S. EXECUTIVE COMMAND CENTER — MASTER GUIDE</h1>
+        <div class="subtitle">Prepared for Dr. Hector Jusino • 1 Windows Hub (HECTORS) + 3 MacBooks + iPhone / iOS Gemini Link</div>
+      </div>
+      <div style="text-align:right;font-size:12px;color:var(--muted);">
+        <strong>Windows Hub:</strong> <code>http://localhost:7777</code><br/>
+        <strong>Home Wi-Fi URL:</strong> <code>http://10.0.0.85:7777</code>
+      </div>
+    </header>
+
+    <h2>1. Launching JARVIS &amp; Unlocking Security on This Windows PC</h2>
+    <ul>
+      <li><strong>Desktop Shortcut:</strong> Double-click <strong>JARVIS Command Center</strong> on your Desktop (or open <strong>Start Menu &rarr; JARVIS Command Center</strong>). It automatically starts the local encrypted server (<code>JarvisHub.exe</code>) and opens your standalone JARVIS app window.</li>
+      <li><strong>Project Folder on PC (<code>HECTORS</code>):</strong> <code>C:\Users\jusin\.gemini\antigravity\scratch\jarvis-command-center</code></li>
+      <li><strong>Master Passcode:</strong> Enter your Master Passcode on the lock screen to unlock. Click <strong>🔒 Lock</strong> (top-right) anytime to lock your session.</li>
+      <li><strong>Opening Security &amp; Settings:</strong> Click <strong>🛡 Security &amp; Settings</strong> in the top-right bar (or bottom of the left sidebar).</li>
+    </ul>
+
+    <h2>2. Saving Your Gemini API Key &amp; Using JARVIS Voice</h2>
+    <ol>
+      <li>Get a free key at <code>https://aistudio.google.com/apikey</code> (starts with <code>AIza...</code>).</li>
+      <li>In JARVIS, click <strong>🛡 Security &amp; Settings</strong> &rarr; click <strong>📋 Paste</strong> next to <strong>Windows DPAPI Encrypted Gemini Key Vault</strong> (use <strong>👁</strong> to verify) &rarr; click <strong>Save Security &amp; Settings</strong>.</li>
+      <li><strong>Testing Spoken Replies:</strong> Click <strong>🔊 Test JARVIS Voice</strong> under the cyan Arc Reactor orb. JARVIS speaks back automatically on <strong>every spoken or typed reply</strong> (toggle <strong>🔊 Voice: ON / MUTED</strong> anytime).</li>
+      <li><strong>3 Unhurried Ways to Speak to JARVIS:</strong>
+        <ul>
+          <li><strong>Click-to-Talk:</strong> Click the cyan Orb once, speak at a relaxed pace (pauses up to 4.5 seconds will NOT cut you off), then click the Orb again (or wait 4.5s) to send.</li>
+          <li><strong>Walkie-Talkie Spacebar:</strong> Hold down <code>Spacebar</code> (when not typing in a box) for as long as you speak; release <code>Spacebar</code> to send.</li>
+          <li><strong>Hands-Free Wake Word:</strong> Toggle <strong>🎧 Wake Word ("Hey Jarvis"): ON</strong> or click <strong>⚡ Gemini Live Audio</strong> for real-time two-way streaming.</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h2>3. Connectors, Book Studios &amp; Scheduled Automations</h2>
+    <ul>
+      <li><strong>🔌 Connectors &amp; Sources Tab:</strong> Connect and encrypt keys (with <strong>📋 Paste</strong> &amp; <strong>👁</strong> buttons) across 3 categories:
+        <ul>
+          <li><em>Book Writing &amp; Publishing:</em> <strong>AIWriteBook</strong>, <strong>Sudowrite / NovelCrafter</strong>, <strong>Amazon KDP &amp; Atticus</strong></li>
+          <li><em>AI Coworkers &amp; Brains:</em> <strong>Viktor AI</strong>, <strong>Google Gemini</strong>, <strong>Anthropic Claude</strong>, <strong>OpenAI</strong>, <strong>OpenRouter</strong>, <strong>Nous Hermes</strong>, <strong>OpenClaw</strong>, <strong>Local Ollama</strong></li>
+          <li><em>Workspace &amp; IDEs:</em> <strong>Notion</strong> (pre-linked to your Notion Hub page <code>41537a43-2562-8115-abf7-cb2f6474e4e1</code>), <strong>ClickUp</strong>, <strong>Cursor IDE</strong>, <strong>Universal Webhooks</strong></li>
+        </ul>
+      </li>
+      <li><strong>⚙ Automations Tab:</strong> Schedule daily clock-time (<code>HH:MM</code>) or recurring interval routines — including Spoken Morning Briefings, 3-MacBook Auto-Syncs, ClickUp Book Sprints, Notion Status Digests, and Viktor/Webhook triggers. Click <strong>▶ Run Now &amp; Speak</strong> on any card to run immediately.</li>
+    </ul>
+
+    <div class="page-break"></div>
+
+    <h2>4. Connecting Tailscale, Your 3 MacBooks &amp; Google Antigravity</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Device</th>
+          <th>JARVIS Slot Name</th>
+          <th>How to Connect</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Windows PC (<code>HECTORS</code>)</strong></td>
+          <td><code>WINDOWS-PRIME</code></td>
+          <td>Primary Hub. Install Tailscale at <code>https://tailscale.com/download/windows</code> (or run <code>winget install --id Tailscale.Tailscale -e</code>).</td>
+        </tr>
+        <tr>
+          <td><strong>MacBook #1, #2, #3</strong></td>
+          <td><code>MACBOOK-ALPHA</code><br/><code>MACBOOK-BETA</code><br/><code>MACBOOK-GAMMA</code></td>
+          <td>1. Install Tailscale (<code>https://tailscale.com/download/mac</code>) with the <strong>same login email</strong>.<br/>2. Open <code>http://10.0.0.85:7777</code> (Wi-Fi) or your Tailscale <code>100.x.x.x:7777</code> URL in Chrome/Safari &amp; pick each Mac's slot (top-right).<br/>3. <em>Optional Terminal Sync &amp; Voice Ping:</em> Copy the 1-line command in <strong>🖥 Laptop Fleet</strong>.</td>
+        </tr>
+        <tr>
+          <td><strong>iPhone / iPad</strong></td>
+          <td><code>IOS-PRIME</code></td>
+          <td>1. Open <code>http://10.0.0.85:7777</code> (or Tailscale URL) in <strong>Safari</strong>.<br/>2. Tap <strong>Share (⬆) &rarr; Add to Home Screen</strong> to install the native Arc Reactor app.<br/>3. For 5G + HTTPS mic: run <code>tailscale serve --bg 7777</code> on Windows PC.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      <strong>Windows Firewall Tip (One-Time if Wi-Fi Devices Timeout):</strong> Open PowerShell as Administrator on <code>HECTORS</code> and run:<br/>
+      <code>New-NetFirewallRule -DisplayName "JARVIS Command Hub" -Direction Inbound -LocalPort 7777 -Protocol TCP -Action Allow -Profile Private</code>
+    </div>
+
+    <h3>Linking Your Google Antigravity App &amp; GitHub Across All 3 MacBooks</h3>
+    <ol>
+      <li>On each MacBook, install Antigravity from <code>https://antigravity.google</code> (or <code>brew install --cask antigravity</code>) and sign in with your <strong>same Google account</strong>.</li>
+      <li>To control this PC's Antigravity remotely from your MacBooks: open Antigravity <strong>Settings (<code>Ctrl+,</code> / <code>Cmd+,</code>) &rarr; Application &rarr; Enable Remote Control: ON</strong>.</li>
+      <li>To sync the JARVIS source code via Private GitHub: create a private repo at <code>https://github.com/new</code> named <code>jarvis-command-center</code>, then run on Windows:
+        <pre>git -C C:\Users\jusin\.gemini\antigravity\scratch\jarvis-command-center remote add origin https://github.com/YOUR_USERNAME/jarvis-command-center.git
+git -C C:\Users\jusin\.gemini\antigravity\scratch\jarvis-command-center push -u origin main</pre>
+        Then on each MacBook: <code>git clone https://github.com/YOUR_USERNAME/jarvis-command-center.git ~/jarvis-command-center</code>
+      </li>
+    </ol>
+
+    <h2>5. Linking Your iPhone Google Gemini App ("JARVIS" Gem) With This Command Center</h2>
+    <p>Google's consumer Gemini iOS app keeps custom Gems sandboxed inside Google's mobile app, so it cannot call a local PC server directly by itself — <strong>however, you can link them together in 3 seamless ways</strong> (built into this update):</p>
+
+    <ol>
+      <li><strong>Unify Their Brain, Persona &amp; 1-Tap Launch (<code>🛡 Security &amp; Settings</code>):</strong>
+        <ul>
+          <li>Open your custom <strong>JARVIS Gem</strong> in the Google Gemini app (or at <code>https://gemini.google.com</code>), copy its <strong>Instructions</strong> (and optional Gem link).</li>
+          <li>In JARVIS Command Center, open <strong>🛡 Security &amp; Settings</strong> &rarr; paste both into <strong>📱 Link Your iPhone Google Gemini "JARVIS" Gem</strong> &rarr; click <strong>Save</strong>.</li>
+          <li>Both assistants now follow the <strong>exact same persona &amp; rules</strong>, and the top <strong>✦ Gemini JARVIS</strong> button jumps straight to your Gem!</li>
+        </ul>
+      </li>
+      <li><strong>Create a 1-Tap "Send to JARVIS Hub" iPhone Share-Sheet Bridge (Apple Shortcuts):</strong>
+        <ul>
+          <li>In JARVIS Command Center, open <strong>🛡 Security &amp; Settings</strong> and click <strong>📋 Copy iPhone Shortcut Token</strong> (this copies your <code>/api/mobile/bridge</code> URL + <code>X-Jarvis-Agent-Token</code>).</li>
+          <li>On your iPhone, open Apple's built-in <strong>Shortcuts</strong> app &rarr; tap <strong>+</strong> &rarr; name it <strong>Send to JARVIS Hub</strong> &rarr; tap the <strong>ⓘ</strong> icon at the bottom and turn ON <strong>Show in Share Sheet</strong> (Receive: <em>Text</em>).</li>
+          <li>Add one action: <strong>Get Contents of URL</strong>:
+            <ul>
+              <li><strong>URL:</strong> <code>http://10.0.0.85:7777/api/mobile/bridge</code> <em>(or your Tailscale URL for 5G anywhere)</em></li>
+              <li><strong>Method:</strong> <code>POST</code></li>
+              <li><strong>Headers:</strong> Key <code>X-Jarvis-Agent-Token</code> = <em>(paste your token)</em></li>
+              <li><strong>Request Body (JSON):</strong> Key <code>title</code> = <code>iPhone Gemini JARVIS</code>, Key <code>text</code> = <code>Shortcut Input</code></li>
+            </ul>
+          </li>
+          <li><strong>How to use it:</strong> Anytime you brainstorm a chapter, app, or plan inside your <strong>Google Gemini iOS app</strong>, tap <strong>Share</strong> on Gemini's reply &rarr; tap <strong>Send to JARVIS Hub</strong>. It instantly appears in your Command Center chat log and saves a Markdown file into <code>workspace\ios-gemini-inbox\</code> across your PC and MacBooks!</li>
+        </ul>
+      </li>
+      <li><strong>Shared Notion Executive Hub:</strong> Both your iPhone and all 4 laptops can view and collaborate inside your live Notion Command Hub: <code>https://app.notion.com/p/41537a4325628115abf7cb2f6474e4e1</code>.</li>
+    </ol>
+  </div>
+</body>
+</html>
